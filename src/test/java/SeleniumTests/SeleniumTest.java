@@ -17,7 +17,7 @@ public class SeleniumTest {
     @Before
     public void setUp() throws Exception {
         //driver = new FirefoxDriver();
-
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
 

@@ -9,4 +9,16 @@ public class LoginPage extends Page {
     public LoginPage(WebDriver driver) {
        super(driver);
     }
+
+    public LoginPage open() {
+        //TO DO implement this
+
+        return this;
+    }
+
+    public DashboardPage logIn(String warsztatautomatyzacja, String notsosimplepass123) {
+        //TO DO implement this
+
+        return new DashboardPage(driver);
+    }
 }
