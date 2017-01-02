@@ -8,14 +8,14 @@ import org.openqa.selenium.WebDriver;
  */
 public class LoginPage extends Page {
 
-    public String baseUrl = "http://streser.nazwa.pl/szkolenia/";
+    public String baseUrl = "http://streser.nazwa.pl/szkolenia";
 
     public LoginPage(WebDriver driver) {
        super(driver);
     }
 
     public LoginPage open() {
-        driver.get(baseUrl + "/wp-admin");
+        driver.get(baseUrl + "/wp-login.php");
         return this;
     }
 

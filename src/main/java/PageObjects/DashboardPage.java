@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -12,8 +13,6 @@ public class DashboardPage extends Page {
     }
 
     public boolean isOpen() {
-        //TO DO implement this
-
-        return false;
+        return driver.findElement(By.linkText("Howdy, warsztatautomatyzacja")).isDisplayed();
     }
 }
