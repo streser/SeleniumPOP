@@ -1,5 +1,6 @@
 package SeleniumTests;
 
+import PageObjects.LoginPage;
 import org.junit.Test;
 
 /**

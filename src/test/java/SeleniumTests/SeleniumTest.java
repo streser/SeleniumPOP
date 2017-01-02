@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class SeleniumTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @Before
     public void setUp() throws Exception {
