@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,8 +11,12 @@ public class PostsListPage extends AdminPage{
         super(driver);
     }
 
-    public boolean isPostPublished(String s) {
-        return false;
+    public boolean isPostPublished(String title) {
+        return driver.getPageSource().contains(title);
     }
 
+    public AddNewPostPage goToAddNewPostPage() {
+        click(By.linkText("Add New"));
+        return new AddNewPostPage(driver);
+    }
 }

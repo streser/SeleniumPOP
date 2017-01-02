@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,7 +11,10 @@ public class AddNewPostPage extends AdminPage {
         super(driver);
     }
 
-    public AddNewPostPage addNewPost(String s, String s1) {
+    public AddNewPostPage addNewPost(String postTitle, String postContent) {
+        insertText(postTitle, By.cssSelector("input#title"));
+        insertText(postContent,  By.xpath("//*[@id=\"content\"]"));
+        click(By.id("publish"));
         return this;
     }
 

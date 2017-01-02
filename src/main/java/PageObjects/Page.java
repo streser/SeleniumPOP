@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 public abstract class Page {
     protected final WebDriver driver;
 
+    public String baseUrl = "http://streser.nazwa.pl/szkolenia";
+
     public Page(WebDriver driver){
         this.driver = driver;
     }
@@ -22,4 +24,8 @@ public abstract class Page {
     }
 
 
+    public BlogPage goToBlogPage() {
+        driver.get(baseUrl);
+        return new BlogPage(driver);
+    }
 }
