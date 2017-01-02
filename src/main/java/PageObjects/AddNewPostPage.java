@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by streser on 02.01.2017.
  */
-public class AddNewPostPage extends Page {
+public class AddNewPostPage extends AdminPage {
     public AddNewPostPage(WebDriver driver) {
         super(driver);
     }
@@ -14,7 +14,4 @@ public class AddNewPostPage extends Page {
         return this;
     }
 
-    public PostsListPage goToPostsListPage() {
-        return new PostsListPage(driver);
-    }
 }

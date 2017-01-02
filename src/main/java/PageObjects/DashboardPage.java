@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by streser on 02.01.2017.
  */
-public class DashboardPage extends Page {
+public class DashboardPage extends AdminPage {
 
     public DashboardPage(WebDriver driver) {
         super(driver);
@@ -16,7 +16,4 @@ public class DashboardPage extends Page {
         return driver.findElement(By.linkText("Howdy, warsztatautomatyzacja")).isDisplayed();
     }
 
-    public AddNewPostPage goToAddNewPostPage() {
-        return new AddNewPostPage(driver);
-    }
 }

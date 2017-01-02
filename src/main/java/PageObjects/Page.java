@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by streser on 02.01.2017.
  */
-public class Page {
+public abstract class Page {
     protected final WebDriver driver;
 
     public Page(WebDriver driver){
@@ -20,4 +20,6 @@ public class Page {
     protected void insertText(String text, By locator) {
         driver.findElement(locator).sendKeys(text);
     }
+
+
 }
