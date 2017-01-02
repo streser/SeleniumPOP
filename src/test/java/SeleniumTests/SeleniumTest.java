@@ -1,5 +1,6 @@
 package SeleniumTests;
 
+import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,5 +26,10 @@ public class SeleniumTest {
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
     }
 }
