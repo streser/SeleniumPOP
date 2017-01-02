@@ -15,4 +15,8 @@ public class DashboardPage extends Page {
     public boolean isOpen() {
         return driver.findElement(By.linkText("Howdy, warsztatautomatyzacja")).isDisplayed();
     }
+
+    public AddNewPostPage goToAddNewPostPage() {
+        return new AddNewPostPage(driver);
+    }
 }

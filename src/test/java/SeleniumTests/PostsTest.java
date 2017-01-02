@@ -1,8 +1,9 @@
 package SeleniumTests;
 
-import PageObjects.DashboardPage;
-import PageObjects.LoginPage;
+import PageObjects.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by streser on 02.01.2017.
