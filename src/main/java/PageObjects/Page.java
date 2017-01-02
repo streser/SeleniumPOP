@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,5 +11,13 @@ public class Page {
 
     public Page(WebDriver driver){
         this.driver = driver;
+    }
+
+    protected void click(By locator) {
+        driver.findElement(locator).click();
+    }
+
+    protected void insertText(String text, By locator) {
+        driver.findElement(locator).sendKeys(text);
     }
 }

@@ -15,7 +15,7 @@ public class LoginTest extends SeleniumTest {
         LoginPage lp = new LoginPage(driver);
         lp.open();
 
-        DashboardPage dp = lp.logIn("warsztatautomatyzacja","notsosimplepass123");
+        DashboardPage dp = lp.logIn();
 
         assertTrue(dp.isOpen());
     }

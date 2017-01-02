@@ -19,10 +19,15 @@ public class LoginPage extends Page {
         return this;
     }
 
-    public DashboardPage logIn(String login, String password) {
-        driver.findElement(By.id("user_login")).sendKeys(login);
-        driver.findElement(By.id("user_pass")).sendKeys(password);
-        driver.findElement(By.id("wp-submit")).click();
+    public DashboardPage logIn() {
+        tryLogIn("warsztatautomatyzacja","notsosimplepass123");
         return new DashboardPage(driver);
     }
+
+    private void tryLogIn(String login, String password) {
+        insertText(login, By.id("user_login"));
+        insertText(password, By.id("user_pass"));
+        click(By.id("wp-submit"));
+    }
+
 }
