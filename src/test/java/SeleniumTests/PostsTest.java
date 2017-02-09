@@ -25,15 +25,23 @@ public class PostsTest extends SeleniumTest {
     private String postContent;
 
 
+
+
+
     @Before
     public void generateTestData() {
         UUID uuid = UUID.randomUUID();
         postTitle = "Post Title" + uuid.toString();
         postContent = "Post Content" + uuid.toString();
-
     }
 
-
+    public void cleanUp(){
+        LoginPage lp = new LoginPage(driver, config);
+        lp.open();
+        DashboardPage dp = lp.logIn();
+        PostsListPage plp = dp.goToPostsListPage();
+        plp.cleanUpPosts();
+    }
 
     @Test
     public void shouldBePossibleToAddNewPost() {
