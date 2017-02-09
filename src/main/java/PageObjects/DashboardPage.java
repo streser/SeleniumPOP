@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.apache.commons.configuration.CompositeConfiguration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,8 +9,8 @@ import org.openqa.selenium.WebDriver;
  */
 public class DashboardPage extends AdminPage {
 
-    public DashboardPage(WebDriver driver) {
-        super(driver);
+    public DashboardPage(WebDriver driver,CompositeConfiguration cc) {
+        super(driver,cc);
     }
 
     public boolean isOpen() {
