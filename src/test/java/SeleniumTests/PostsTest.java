@@ -33,6 +33,7 @@ public class PostsTest extends SeleniumTest {
         UUID uuid = UUID.randomUUID();
         postTitle = "Post Title" + uuid.toString();
         postContent = "Post Content" + uuid.toString();
+        cleanUp();
     }
 
     public void cleanUp(){
@@ -41,6 +42,7 @@ public class PostsTest extends SeleniumTest {
         DashboardPage dp = lp.logIn();
         PostsListPage plp = dp.goToPostsListPage();
         plp.cleanUpPosts();
+        plp.logOut();
     }
 
     @Test
