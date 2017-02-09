@@ -71,7 +71,7 @@ public abstract class Page  {
         }
     }
 
-    public List<WebElement> getElementList(String locator, String type) {
+    public List<WebElement> getElementsList(String locator, String type) {
         type = type.toLowerCase();
         List<WebElement> elementList = new ArrayList<WebElement>();
         if (type.equals("id")) {
@@ -140,9 +140,6 @@ public abstract class Page  {
         }
         return element;
     }
-
-
-
 
     protected void click(By locator) {
         driver.findElement(locator).click();

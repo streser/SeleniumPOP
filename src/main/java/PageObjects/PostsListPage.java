@@ -22,7 +22,7 @@ public class PostsListPage extends AdminPage{
         while (!isAllCleaned) {
             //int size = tr1.size();
             // for (int i = 0; i < size; i++) {
-            List<WebElement> tr = getElementList("//tbody[@id='the-list']//tr", "xpath");
+            List<WebElement> tr = getElementsList("//tbody[@id='the-list']//tr", "xpath");
             if (tr.size() > 0) {
                 System.out.println("Current list size " + tr.size());
                 String actualRow = tr.get(0).getText();
