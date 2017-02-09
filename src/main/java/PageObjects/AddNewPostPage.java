@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.apache.commons.configuration.CompositeConfiguration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -7,8 +8,8 @@ import org.openqa.selenium.WebDriver;
  * Created by streser on 02.01.2017.
  */
 public class AddNewPostPage extends AdminPage {
-    public AddNewPostPage(WebDriver driver) {
-        super(driver);
+    public AddNewPostPage(WebDriver driver, CompositeConfiguration cc) {
+        super(driver,cc);
     }
 
     public AddNewPostPage addNewPost(String postTitle, String postContent) {
