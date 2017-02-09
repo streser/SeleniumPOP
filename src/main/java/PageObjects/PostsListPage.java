@@ -16,7 +16,7 @@ public class PostsListPage extends AdminPage{
         super(driver,cc);
     }
 
-    protected void cleanUpPosts() {
+    public void cleanUpPosts() {
         boolean isAllCleaned = false;
 
         while (!isAllCleaned) {

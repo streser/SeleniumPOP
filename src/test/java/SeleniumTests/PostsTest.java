@@ -1,6 +1,7 @@
 package SeleniumTests;
 
 import PageObjects.*;
+import javafx.geometry.Pos;
 import org.apache.commons.configuration.CompositeConfiguration;
 import org.junit.Before;
 import org.junit.Test;
@@ -47,6 +48,7 @@ public class PostsTest extends SeleniumTest {
         plp = anpp.goToPostsListPage();
         assertTrue(plp.isPostPublished(postTitle));
         lp = plp.logOut();
+
 
 
         BlogPage bp = lp.goToBlogPage();
